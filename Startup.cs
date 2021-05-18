@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using asp.net.Services.CharacterService;
 
 namespace asp.net
 {
@@ -32,6 +33,8 @@ namespace asp.net
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "asp.net", Version = "v1" });
             });
+            services.AddAutoMapper(typeof(Startup));
+            services.AddScoped<ICharacterService, CharacterService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
