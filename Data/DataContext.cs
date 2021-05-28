@@ -10,6 +10,7 @@ namespace asp.net.Data
         {
 
         }
+        //this is how we tell entity how to set up our db
 
         public DbSet<Character> Characters {get;set;}
     }

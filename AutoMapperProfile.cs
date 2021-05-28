@@ -11,6 +11,5 @@ namespace asp.net
             CreateMap<Character, GetCharacterDto>();
             CreateMap<AddCharacterDto, Character>();
         }
-        
     }
 }
